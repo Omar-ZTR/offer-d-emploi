@@ -1,0 +1,183 @@
+<body>
+  <div class="wrapper">
+    <app-sadbar></app-sadbar>
+    <div id="content">
+      <app-nav></app-nav>
+
+      <h1 class="text">let us help you find the right talent</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-25">
+            <p>Terme of job</p>
+            <p></p>
+          </div>
+
+          <div class="col-75">
+            <label
+              ><input type="radio" name="binet" [(ngModel)]="time" value=" Short-term" />
+              Short-term</label
+            >
+            <label for="oenologie"
+              ><input type="radio" name="binet" [(ngModel)]="time" value=" Longer term" />
+              Longer term</label
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <p>Title</p>
+            <p></p>
+          </div>
+
+          <div class="col-75">
+            <input
+              type="text"
+              id="lname"
+              name="title"
+              placeholder="Enter the name of your job post"
+              [(ngModel)]="title" 
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="country">Job Category</label>
+          </div>
+          <div class="col-75">
+            <select
+              id="skills"
+              name="Category"
+              (change)="changeCatg($event)"
+              [(ngModel)]="categ"
+            >
+              <option value="0" disabled selected>-- Choose One --</option>
+              <option *ngFor="let cat of categories" [value]="cat.value">
+                {{ cat.name }}
+              </option>
+              <!-- <option value="0" disabled>-- Choose One --</option>
+              <option value="dev">Development</option>
+              <option value="cover">Cover book</option>
+              <option value="music">Music</option>
+              <option value="formation">Formation</option>
+              <option value="design">Design & Creative</option>
+              <option value="marketing">Sales & Marketing</option>
+              <option value="writing">Writing & Translation</option>
+              <option value="animation">Animation</option> -->
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <p>Description</p>
+          </div>
+          <div class="col-75">
+            <h6>A good description includes:</h6>
+            <p>Summary objective of the job</p>
+            <P>Special demands</P>
+            <p>Job duties and responsibilities</p>
+            <textarea
+              id="discription"
+              name="discription"
+              placeholder="Write your discription.."
+              style="height: 200px"
+              [(ngModel)]="desc"
+            ></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <p>level of experience</p>
+            <p></p>
+          </div>
+
+          <div class="col-75">
+            <div class="checkbox">
+              <label class="mt-3">
+                <input  type="radio"
+                name="level"
+                value=" Entry level"
+                [(ngModel)]="level"
+                 class="card-input-element d-none" >
+                <span class="card card-body bg-light d-flex flex-row justify-content-between align-items-center">
+               Entry level
+                </span>
+                </label>
+               
+              <label class="mt-3">
+                <input  type="radio"
+                name="level"
+                value="Intermediate"
+                [(ngModel)]="level"
+                 class="card-input-element d-none" >
+                <span class="card card-body bg-light d-flex flex-row justify-content-between align-items-center">
+                Intermediate
+                </span>
+                </label>
+                
+              <label class="mt-3">
+                <input  type="radio"
+                name="level"
+                value="Expert"
+                [(ngModel)]="level"
+                 class="card-input-element d-none" >
+                <span class="card card-body bg-light d-flex flex-row justify-content-between align-items-center">
+                Expert
+                </span>
+                </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <p>Skills</p>
+            <p></p>
+          </div>
+
+          <div class="col-75">
+            <!-- <div id="msgbox"></div> -->
+            <ul>
+             <li class="ski" *ngFor="let skill of selectedSkils">
+                <input type="checkbox" [(ngModel)]="skill.selected" />{{
+                  skill.value
+                }}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <p>file</p>
+            <p></p>
+          </div>
+
+          <div class="col-75">
+            <input type="file" id="customFile" accept=".pdf" (change)="handleFileUpload($event)"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <p>Budget</p>
+            <p></p>
+          </div>
+
+          <div class="col-75">
+            <input
+              class="with-border"
+              type="text"
+              onkeypress="return (event.charCode >= 48 && event.charCode <= 57)||event.charCode == 44"
+              name="price"
+              autocomplete="off"
+              [(ngModel)]="budget"
+            />
+          </div>
+        </div>
+        <hr/>
+       
+        
+        <div>
+          <button type="button" class="btnn" (click)="handleAdd()" >Add A new post </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

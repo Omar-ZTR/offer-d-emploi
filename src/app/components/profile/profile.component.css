@@ -1,0 +1,61 @@
+.nav {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+.btn {
+  float:left;
+  display:block;
+  color: rgb(250, 242, 242);
+  text-align: center;
+  text-decoration: none;
+  background: none;
+}
+
+ .btn:hover {
+  background-color: #111;
+}
+.container {
+ margin-left: 15%;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 60%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.disc {
+  padding: 2px 16px;
+
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}

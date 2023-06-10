@@ -1,0 +1,54 @@
+<body>
+  <div class="wrapper">
+     <app-sadf></app-sadf>
+      <div id="content">
+          <app-navf></app-navf>
+          <a href="/formulaire" class="edit"><i class="ti-pencil"></i></a>
+          <div class="center" >
+    <img src="http://localhost:3000/{{Freelancer.profileImage}}" alt="Avatar" style="width:20%;border-radius: 100%;">
+    <h1>Zouiter OMAR</h1>
+       <p>Developmmet</p>
+       <div class="rating">
+        <div class="stars">
+          <i class="fa fa-star "></i>
+        </div>
+   </div>
+
+</div>
+<div class="row">
+   <div class="leftcolumn">
+     <div class="card">
+       <h2>description</h2>
+       <p>{{Freelancer.desc}}</p>
+     </div>
+     <div class="cad">
+       <h2>Experience</h2>
+       <ol class="steps">
+        <li><h4>{{Freelancer.experience}}</h4>
+           </li>
+       
+        
+      </ol>
+   </div>
+   <div class="cad">
+    <h2>Formation</h2>
+    <ol class="steps">
+     <li><h4>{{Freelancer.formation}}</h4></li>
+     
+     
+   </ol>
+</div>
+   </div>
+   <div class="rightcolumn">
+          <div class="card" style="background-color: rgb(43, 226, 134);">
+            <h2>About me</h2>
+           <h5>{{Freelancer.country}}/{{Freelancer.city}}</h5>
+           <h5>+216{{Freelancer.phoneNumber}}</h5>
+           <h5>{{Freelancer.user.email}}</h5>
+            
+          </div>
+   </div>
+</div>
+      </div>
+  </div>
+</body>

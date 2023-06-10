@@ -1,0 +1,142 @@
+<body>
+    <div class="wrapper">
+       <app-sadbar></app-sadbar>
+        <div id="content">
+            <app-nav></app-nav>
+            <div class="Nav">
+              <button
+              class="btn active"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Developmmet"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('DEV')"
+            >
+              Developmmet
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Design"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('design')"
+            >
+              Design & Creative
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Sales"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('marketing')"
+            >
+              Sales & Marketing
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Writing"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('writing')"
+            >
+              Writing & Translation
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Cover"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('cover')"
+            >
+              Cover book
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Animation"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('animation')"
+            >
+              Animation
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Music"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('music')"
+            >
+              Music
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Formation"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('formation')"
+            >
+              Formation
+            </button>
+              </div>
+           
+            <br />
+            
+              <div  *ngFor="let offre of selectedOffres">
+                <div class="card">
+                  <div class="row">
+                    <div class="col-sm-9">
+                      <ul>
+                        <li>
+                          <a routerLink="/finoffre/{{offre._id}}">
+                            <h5>{{ offre.category }}</h5>
+                            <h4 class="card-title py-2">{{ offre.title }}</h4>
+                            <h6 class="card-subtitle text-muted">
+                              {{ offre.createdAt }}
+                            </h6>
+                            <h3 class="card-text p-y-1">{{ offre.userId.nom }}</h3>
+                            <HR />
+                            <p class="card-text p-y-1">{{ offre.desc }}</p>
+                          </a>
+                        </li>
+                      </ul>
+                   
+                    <ul>
+                      <li *ngFor="let skill of offre.skils"><h4>Skills:</h4>{{skill}}</li>
+                    </ul> </div>
+                    <div class="col-sm-2">
+                      <h5>Terme of job:{{offre.terme}}</h5> 
+                      <HR />
+        
+                      <h5>Level of experience:{{ offre.level }}</h5>
+                      <HR />
+        
+                      <h5>Budget:{{ offre.budget }}</h5>
+                    </div>
+                  </div>
+                  </div>
+                
+              </div>
+            
+   
+</div>
+</div>
+
+</body>
+
+
+ 

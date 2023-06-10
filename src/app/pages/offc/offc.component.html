@@ -1,0 +1,65 @@
+<body>
+  <div class="wrapper">
+    <app-sadbar></app-sadbar>
+    <div id="content">
+      <app-nav></app-nav>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Categorie</th>
+            <th>Descritpion</th>
+            <th>File</th>
+            <th>Skills</th>
+            <th>Budget</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let offre of selectedOffres">
+            <td>
+              <p class="hyphens" lang="de">{{ offre.title }}</p>
+            </td>
+            <td>
+              <p class="hyphens" lang="de">{{ offre.category }}</p>
+            </td>
+            <td>
+              <p class="hyphens" lang="de">
+                {{offre.desc}}</p>
+            </td>
+            <td>
+              <p class="hyphens" lang="de">{{ offre.attachmentPath }}</p>
+            </td>
+            
+            <td>
+              <ul>
+                <li *ngFor="let skill of offre.skils">
+                  <p class="hyphens" lang="de">{{ skill }}</p>
+                </li>
+              </ul>
+            </td>
+            <td>{{ offre.budget }}</td>
+            <td>
+              <a
+                class="btn btn-danger"
+                title="Edit"
+                data-toggle="tooltip"
+                routerLink="/edit/{{ offre._id }}"
+              >
+                <i class="material-icons">Edit</i>
+              </a>
+              <button
+                class="btn btn-primary"
+                title="Delete"
+                data-toggle="tooltip"
+                (click)="deleteOffer(offre._id)"
+              >
+                <i class="material-icons">Delete</i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>

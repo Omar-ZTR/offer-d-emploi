@@ -1,0 +1,77 @@
+<body>
+    <div class="wrapper">
+       <app-sadf></app-sadf>
+        <div id="content">
+            <app-navf></app-navf> 
+<!--<div  *ngFor="let offre of selectedOffres">
+    <div class="card">
+      <div class="row">
+        <div class="col-sm-9">
+          <ul>
+            <li>
+              <a routerLink="/finoffre/{{offre._id}}">
+                <h5>{{ offre.category }}</h5>
+                <h4 class="card-title py-2">{{ offre.title }}</h4>
+                <h6 class="card-subtitle text-muted">
+                  {{ offre.createdAt }}
+                </h6>
+                <h3 class="card-text p-y-1">{{ offre.userId.nom }}</h3>
+                <HR />
+                <p class="card-text p-y-1">{{ offre.desc }}</p>
+              </a>
+            </li>
+          </ul>
+       
+        <ul>
+          <li *ngFor="let skill of offre.skils"><h4>Skills:</h4>{{skill}}</li>
+        </ul> </div>
+        <div class="col-sm-2">
+          <h5>Terme of job:{{offre.terme}}</h5> 
+          <HR />
+
+          <h5>Level of experience:{{ offre.level }}</h5>
+          <HR />
+
+          <h5>Budget:{{ offre.budget }}</h5>
+        </div>
+      </div>
+      </div>
+    
+ 
+    -->
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+           <th>Customer</th>
+         
+          <th>Titel offer</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  >
+          <td style="width: 200px;">
+            <p class="hyphens" lang="de" style="color: blue; font-size: 20px;" >DEV-GX</p>
+          </td>
+         <td>
+          <p class="hyphens" lang="de" style=" font-size: 20px;" >title offer</p>
+         </td>
+       
+          <td>
+           
+            <button
+              class="btn "
+              title="Delete"
+              data-toggle="tooltip"
+            
+            >
+              <i class="fa fa-trash"> Delete</i>
+            </button>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+</div>
+</div>
+</body>

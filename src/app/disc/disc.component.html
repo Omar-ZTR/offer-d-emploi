@@ -1,0 +1,76 @@
+
+      
+       <div class="center" >
+        
+        <img src="./assets/img/banner/user-male-circle.png" alt="Avatar" style="width:20%">
+        <!--<h1>{{user.nom}}</h1>-->
+           <p>{{clientDetails.theme}}</p>
+     
+       <div class="rating">
+              <div class="stars">
+                <i class="fa fa-star "></i>
+                <i class="fa fa-star "></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+       </div>
+       <div >
+         <button type="submit" style="background: none;border: none;"><p style="color: red;">Add 	&#10084; Favoris<p></p></button>
+       </div>   
+  </div>
+<div class="row">
+       <div class="leftcolumn">
+         <div class="card">
+           <h2>description</h2>
+           <p>{{clientDetails.desc}}</p>
+         </div>
+         <div class="card">
+           <h2>Objectives</h2>
+           <p>{{clientDetails.Objectives}}</p>
+           </div>
+       </div>
+       <div class="rightcolumn">
+              <div class="card" style="background-color: rgb(43, 226, 134);">
+                <h2>About me</h2>
+               <h5>{{clientDetails.city}}/{{clientDetails.country}}</h5>
+               <h5>{{clientDetails.phoneNumber}}</h5>
+               <!--<h5>{{clientDetails.userId.email}}</h5>
+               -->
+              </div>
+       </div>
+       </div>
+       <div  *ngFor="let offre of selectedOffres">
+        <div class="card">
+          <div class="row">
+            <div class="col-sm-9">
+              <ul>
+                <li>
+                  <a href="/fof">
+                    <h5>{{ offre.category }}</h5>
+                    <h4 class="card-title py-2">{{ offre.title }}</h4>
+                    <h6 class="card-subtitle text-muted">
+                      {{ offre.createdAt }}
+                    </h6>
+                    <h3 class="card-text p-y-1">{{ offre.userId.nom }}</h3>
+                    <HR />
+                    <p class="card-text p-y-1">{{ offre.desc }}</p>
+                  </a>
+                </li>
+              </ul>
+           
+            <ul>
+                <li *ngFor="let skill of offre.skils"><h4>Skills</h4>{{skill}}</li>
+              </ul></div>
+              <div class="col-sm-2">
+               <h5>Terme of job: {{offre.terme}}</h5> 
+                <HR />
+  
+                <h5>Level: {{ offre.level }}</h5>
+                <HR />
+  
+                <h5> Budget:{{ offre.budget }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>

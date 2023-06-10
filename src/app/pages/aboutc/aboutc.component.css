@@ -1,0 +1,91 @@
+body{
+  margin: 5%;
+  left:15%;
+  margin-top: 0;
+  background: none;
+}
+
+.steps {
+clear: both;
+list-style: lower-roman;
+padding-left: 5%;
+}
+.steps li {
+margin: 2em 0;
+padding-top: 1em;
+display: block;
+position: relative;
+counter-increment: inst;
+}
+.steps li::before {
+content: counter(inst);
+
+background: rgb(30, 255, 0);
+color: #fff;
+
+font-size: 1em;
+font-weight: 700;
+font-style: italic;
+text-shadow: 1px 1px rgba(255, 150, 0, 0.5);
+
+border-radius: 0 0.675em 0.675em 0;
+font-size: 1.5em;
+text-align: center;
+
+padding-top: 0;
+padding-left: 2.25%;
+left: -5%;
+top: -0.65em;
+height: 1.35em;
+width: 1.35em;
+position: absolute;
+
+transition: all 0.2s ease-in-out;
+
+z-index: -1;
+}
+input[type=text], select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=tel], select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}
+
+
+input[type=submit] {
+  position: relative;
+  left: 43%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px ;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.txt{
+  position: relative;
+  left: 35%;
+  font-family:monospace;
+  font-size:90px;
+  color: rgba(83, 192, 61, 0.774);
+}
+

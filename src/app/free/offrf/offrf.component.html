@@ -1,0 +1,142 @@
+<body>
+    <div class="wrapper">
+       <app-sadf></app-sadf>
+        <div id="content">
+            <app-navf></app-navf>
+            <div class="Nav">
+              <button
+              class="btn active"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Developmmet"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('DEV')"
+            >
+              Developmmet
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Design"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('design')"
+            >
+              Design & Creative
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Sales"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('marketing')"
+            >
+              Sales & Marketing
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Writing"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('writing')"
+            >
+              Writing & Translation
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Cover"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('cover')"
+            >
+              Cover book
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Animation"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('animation')"
+            >
+              Animation
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Music"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('music')"
+            >
+              Music
+            </button>
+            <button
+              class="btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#Formation"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              (click)="setSelectedCat('formation')"
+            >
+              Formation
+            </button>
+              </div>
+           
+            <br />
+            
+              <div  *ngFor="let offre of selectedOffres">
+                <div class="card">
+                  <div class="row">
+                    <div class="col-sm-9">
+                      <ul>
+                        <li>
+                          <a href="/fof">
+                            <h5>Developmmet</h5>
+                            <h4 class="card-title py-2"style="color: rgb(92, 47, 175);">Développeur</h4>
+                            
+                            <h3 class="card-text p-y-1"  style="color: rgb(0, 140, 255);"><span style="font-size: 20px; color: black;">by</span>Dev-GX</h3>
+                            <h6 class="card-subtitle text-muted">
+                            2021-06-22
+                            </h6><HR />
+                            <p class="card-text p-y-1">Afin d’accompagner sa forte croissance, NeoXam recherche un Développeur .Net(H/F) pour son équipe de développement du produit Tracker, progiciel front/middle office à destination des sociétés de gestion de portefeuille (Asset Managers).
+                              Intégré dans une équipe à taille humaine, au sein d’une R&D plus large, vous assurerez le maintien et le support de l’existant tout en intervenant également sur les développements </p>
+                          </a>
+                        </li>
+                      </ul>
+                   
+                    <ul>
+                        <li *ngFor="let skill of offre.skils"></li><h4 style="color: rgb(2, 177, 2);">Skills</h4><span>HTML,CSS,JS,REACT</span>
+                      </ul></div>
+                      <div class="col-sm-2">
+                       <h5 style="color: rgb(7, 228, 136);">Terme of job:</h5> <span></span> <span>short-terme</span>
+                        <HR />
+          
+                        <h5 style="color: rgb(7, 228, 136);">Level: </h5><span>Expert</span>
+                        <HR />
+          
+                        <h5 style="color: rgb(7, 228, 136);"> Budget:</h5><span>1200dt</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+   
+</div>
+</div>
+
+</body>
+
+
+ 

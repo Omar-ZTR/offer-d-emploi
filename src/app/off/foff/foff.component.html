@@ -1,0 +1,96 @@
+
+  <div style="background: rgba(0, 0, 0, 0.692); padding: 80px"></div>
+  <div style="margin-left: 4%;margin-right: 2% ;">
+  <div class="row">
+    <div class="leftcolumn">
+      <h3>{{ initOffre.category }}</h3>
+        <h2 class="text">{{ initOffre.title }}</h2> 
+        <h6>{{ initOffre.createdAt | date }}</h6>
+<HR>
+<h3>Description</h3>
+<p> {{ initOffre.desc }}</p>
+<HR>
+
+<h3>Skills important:</h3>
+<ul>
+  <li *ngFor="let skill of initOffre.skills">{{ skill }}</li>
+</ul>
+<HR>
+ 
+    <button class="bttn" type="button" (click)="setshowInput()">Posit </button>
+    <div *ngIf="showInput">
+      <div class="modal-dialog" >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Motivation letter</h5>
+           
+          </div>
+          <div class="modal-body">
+            <div class="mt-10">
+              <label for="motivation letter"></label>
+              <textarea class="single-textarea" placeholder="motivation letter" onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'motivation letter'" required></textarea>
+            </div>          
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="hideInput()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin: 5%; width: 50%">
+      <p>Comments:</p>
+      <HR />
+      <div>
+        <ul>
+          <li *ngFor="let comment of initOffre.comments">
+            <h5>{{ comment.userID.nom }}</h5>
+            <p>{{comment.text}}</p>
+            
+            <span>{{comment.date | date }}</span>
+            <hr/>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <textarea
+          name="comments"
+          id="comments"
+          style="font-family: sans-serif; font-size: 1.2em"
+          [(ngModel)]="commentText"
+        >
+        </textarea>
+      </div>
+      <button
+        (click)="handleAddComment()"
+        class="btn btn-primary"
+        style="background-color: rgb(216, 94, 45)"
+      >
+        Send
+      </button>
+      <HR />
+    </div>
+  </div>
+<div class="rightcolumn">
+    <div class="card" style= "background-color: rgba(120, 240, 140, 0.822);">
+        <h2>About client</h2>
+       <h5>{{ initOffre.userid.name }} {{ initOffre.userid.prenom }}</h5>
+       <h5>{{ initOffre.userid.email }}</h5>
+       <h5>{{ initOffre.userid.PhoneNumber }}</h5>
+    </div>
+    <div class="card" style="background-color: rgba(247, 96, 96, 0.836);">
+      <h2>terme of job:</h2>
+     <h5>{{ initOffre.terme }}</h5>
+     <HR>
+
+     <h2>Level of experience:</h2>
+     <h5>{{ initOffre.level }}</h5>
+     <HR>
+
+     <h2>Budget:</h2>
+     <h5>{{ initOffre.budget }}dt</h5>
+    </div>
+</div>
+</div>
+    </div>
+    

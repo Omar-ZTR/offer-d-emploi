@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <ul class="nav navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="/client">profile</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/poste">Add new</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/login">Logout</a>
+    </li>
+  </ul>
+</nav>
+<a href="/aboutc" class="edit"><i class="ti-pencil"></i></a>
+
+<div class="row">
+  <div class="leftcolumn">
+    <h2 class="text">{{ initOffre.title }}</h2>
+    <h6>{{ initOffre.createdAt | date }}</h6>
+    <a href="/aboutc"
+      ><h3>{{ initOffre.userId.nom }} {{ initOffre.userId.prenom }}</h3></a
+    >
+    <h3>Description</h3>
+    <p>{{ initOffre.desc }}</p>
+    <h3>Skills:</h3>
+    <ul>
+      <li *ngFor="let skill of initOffre.skills">{{ skill }}</li>
+    </ul>
+    <div style="margin: 5%; width: 50%">
+      <p>Comments:</p>
+      <HR />
+      <div>
+        <ul>
+          <li *ngFor="let comment of initOffre.comments">
+            <h5>{{ comment.userID.nom }}</h5>
+            <p>{{comment.text}}</p>
+            
+            <span>{{comment.date | date }}</span>
+            <hr/>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <textarea
+          name="comments"
+          id="comments"
+          style="font-family: sans-serif; font-size: 1.2em"
+          [(ngModel)]="commentText"
+        >
+        </textarea>
+      </div>
+      <button
+        (click)="handleAddComment()"
+        class="btn btn-primary"
+        style="background-color: rgb(216, 94, 45)"
+      >
+        Send
+      </button>
+      <HR />
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>terme of job:</h2>
+      <h5>{{ initOffre.terme }}</h5>
+      <h2>Level of experience:</h2>
+      <h5>{{ initOffre.level }}</h5>
+      <h2>Budget:</h2>
+      <h5>{{ initOffre.Budget }}dt</h5>
+    </div>
+  </div>
+</div>

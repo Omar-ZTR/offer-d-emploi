@@ -1,0 +1,111 @@
+<div
+  style="
+    background-image: url('../../../assets/img/banner/hh1.jpg');
+    background-size: cover;
+    height: 100vh;
+  "
+>
+  <form [formGroup]="freelanceForm" (ngSubmit)="submitval()"> 
+    <br />
+    <h1 class="txt">Settings</h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <label for="numb">Phone number</label>
+        <input
+          type="tel"
+          name="tel"
+          maxlength="10"
+          placeholder="Your number.."
+          formControlName="phoneNumber"
+
+        />
+
+        <!--<label for="category">Category</label>
+<select>
+ 
+
+<option value="0" disabled>-- Choose One --</option>
+<option value="dev">Development</option>
+<option value="cover">Cover book</option>
+<option value="music">Music</option>
+<option value="formation">Formation</option>
+<option value="design">Design & Creative</option>
+<option value="marketing">Sales & Marketing</option>
+<option value="writing">Writing & Translation</option>
+<option value="animation">Animation</option> 
+</select>
+-->
+        <label for="level">level of Experience</label>
+        <select id="Level" name="Level" formControlName="level">
+          <option value="entry level">Entry level</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="expert">Expert</option>
+        </select>
+        <br>
+        <label>Profile Image</label> 
+        <input type="file" (change)="onChangeImg($event)" accept=".jpeg,.jpg,.png" />
+      </div>
+    
+      <div class="col-sm-6">
+        <label for="country">Country</label>
+        <select id="country" name="country" formControlName="country">
+          <option value="tunisia">Tunisia</option>
+          <option value="algeria">Algeria</option>
+          <option value="libya">Libya</option>
+          <option value="morocco">Morocco</option>
+          <option value="egypt">Egypt</option>
+        </select>
+        <label for="city">City</label>
+        <select id="city" name="city" formControlName="city">
+          <option value="sousse">Sousse</option>
+          <option value="algeria">Mahdia</option>
+          <option value="libya">Nabel</option>
+          <option value="morocco">Morocco</option>
+          <option value="egypt">Egypt</option>
+        </select>
+      </div>
+    </div>
+    <div class="mt-10" style="width: 55%">
+      <label for="discription">Discription</label>
+      <textarea
+        class="single-textarea"
+        placeholder="discription"
+        onfocus="this.placeholder = ''"
+        onblur="this.placeholder = 'discription'"
+        required
+        formControlName="desc"
+      ></textarea>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="mt-10">
+          <label for="experience">Experience</label>
+
+          <textarea
+            class="single-textarea"
+            placeholder="experience"
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'experience'"
+            required
+            formControlName="experience"
+          ></textarea>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="mt-10">
+          <label for="experience">Formation</label>
+
+          <textarea
+            class="single-textarea"
+            placeholder="formation"
+            onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'formation'"
+            required
+            formControlName="formation"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    <input type="submit" value="Save " />
+  </form>
+</div>

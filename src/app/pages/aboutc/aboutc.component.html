@@ -1,0 +1,102 @@
+<div
+  style="
+    background-image: url('../../../assets/img/banner/hh1.jpg');
+    background-size: cover;
+    height: 100vh;
+  "
+>
+  <body>
+    <form [formGroup]="clientForm" (ngSubmit)="submitval()">
+      <h1 class="txt">Settings</h1>
+      <div class="row">
+        <div class="col-sm-6">
+         
+          <br />
+
+          <label for="city">theme</label>
+          <input
+            type="text"
+            name="theme"
+            maxlength="10"
+            placeholder="your theme ..  "
+            formControlName="theme"
+          />
+          <label for="numb">Phone number</label>
+          <input
+            type="tel"
+            name="tel"
+            maxlength="10"
+            placeholder="Your number.."
+            formControlName="phoneNumber"
+          />
+          <label>Profile Image</label>
+          <input type="file" (change)="onChangeImg($event)" accept=".jpeg,.jpg,.png" />
+          <!--<label for="category">Category</label>
+<select>
+ 
+
+<option value="0" disabled>-- Choose One --</option>
+<option value="dev">Development</option>
+<option value="cover">Cover book</option>
+<option value="music">Music</option>
+<option value="formation">Formation</option>
+<option value="design">Design & Creative</option>
+<option value="marketing">Sales & Marketing</option>
+<option value="writing">Writing & Translation</option>
+<option value="animation">Animation</option> 
+</select>
+-->
+        </div>
+        <div class="col-sm-6">
+          <label for="country">Country</label>
+          <select id="country" name="country" formControlName="country">
+            <option value="tunisia">Tunisia</option>
+            <option value="algeria">Algeria</option>
+            <option value="libya">Libya</option>
+            <option value="morocco">Morocco</option>
+            <option value="egypt">Egypt</option>
+          </select>
+          <label for="city">City</label>
+          <input
+            type="text"
+            name="city"
+            maxlength="10"
+            placeholder="Your city.."
+            formControlName="city"
+          />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="mt-10">
+            <label for="discription">Discription</label>
+            <textarea
+              class="single-textarea"
+              placeholder="discription"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'discription'"
+              required
+              formControlName="desc"
+            ></textarea>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="mt-10">
+            <label for="experience">Objectives</label>
+
+            <textarea
+              class="single-textarea"
+              placeholder="formation"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'formation'"
+              required
+              formControlName="Objectives"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="Save " />
+    </form>
+  </body>
+</div>

@@ -1,0 +1,141 @@
+<div
+  style="
+    background-image: url('../../../assets/img/banner/hh1.jpg');
+    background-size: cover;
+  "
+>
+  <div style="background: none; padding: 80px"></div>
+  <div class="nav">
+    <button
+      class="btn active"
+      type="button"
+      data-toggle="collapse"
+      data-target="#Developmmet"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+      (click)="setSelectedCat('DEV')"
+    >
+      Developmmet
+    </button>
+    <button
+      class="btn"
+      type="button"
+      data-toggle="collapse"
+      data-target="#Design"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+      (click)="setSelectedCat('design')"
+    >
+      Design & Creative
+    </button>
+    <button
+      class="btn"
+      type="button"
+      data-toggle="collapse"
+      data-target="#Sales"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+      (click)="setSelectedCat('marketing')"
+    >
+      Sales & Marketing
+    </button>
+    <button
+      class="btn"
+      type="button"
+      data-toggle="collapse"
+      data-target="#Writing"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+      (click)="setSelectedCat('writing')"
+    >
+      Writing & Translation
+    </button>
+    <button
+      class="btn"
+      type="button"
+      data-toggle="collapse"
+      data-target="#Cover"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+      (click)="setSelectedCat('cover')"
+    >
+      Cover book
+    </button>
+    <button
+      class="btn"
+      type="button"
+      data-toggle="collapse"
+      data-target="#Animation"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+      (click)="setSelectedCat('animation')"
+    >
+      Animation
+    </button>
+    <button
+      class="btn"
+      type="button"
+      data-toggle="collapse"
+      data-target="#Music"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+      (click)="setSelectedCat('music')"
+    >
+      Music
+    </button>
+    <button
+      class="btn"
+      type="button"
+      data-toggle="collapse"
+      data-target="#Formation"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+      (click)="setSelectedCat('formation')"
+    >
+      Formation
+    </button>
+  </div>
+
+  <div
+    class="container mt-10 py-20"
+    style="min-height: 100vh; min-width: 100vw; margin-top: 10px"
+  >
+    <br />
+    
+      <div  *ngFor="let offre of selectedOffres">
+        <div class="card">
+          <div class="row">
+            <div class="col-sm-9">
+              <ul>
+                <li>
+                  <a href="/fof">
+                    <h5>{{ offre.category }}</h5>
+                    <h4 class="card-title py-2" style="color: rgb(92, 47, 175);">{{ offre.title }}</h4>
+                    
+                    <h3 class="card-text p-y-1"style="color: rgb(0, 140, 255);"><span style="font-size: 20px; color: black;">by</span>{{ offre.userId.nom }}</h3>
+                    <h6 class="card-subtitle text-muted">
+                      {{ offre.createdAt }}
+                    </h6><HR />
+                    <p class="card-text p-y-1">{{ offre.desc }}</p>
+                  </a>
+                </li>
+              </ul>
+            
+            <ul>
+              <li *ngFor="let skill of offre.skils" ><h4 style="color: rgb(187, 26, 5);">Skills</h4><span>{{skill}}</span></li>
+            </ul></div>
+            <div class="col-sm-2">
+              <h5 style="color: rgb(7, 228, 136);">terme of job: </h5><span>{{offre.terme}}</span> 
+              <HR />
+
+              <h5 style="color: rgb(7, 228, 136);">Level: </h5><span>{{ offre.level }}</span>
+              <HR />
+
+              <h5 style="color: rgb(7, 228, 136);">Budget: </h5><span>{{ offre.budget }}</span>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>

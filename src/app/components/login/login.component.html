@@ -1,0 +1,35 @@
+<div
+  style="
+    background-image: url('../../../assets/img/banner/hh1.jpg');
+    background-size: cover;
+    height: 100vh;
+  "
+>
+  <app-header></app-header>
+
+  <div class="login-box">
+    <form [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" formControlName="email" />
+      </div>
+
+      <div class="textbox">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" formControlName="password"/>
+      </div>
+
+      <input type="submit" class="btn" value="Login" />
+    </form>
+
+    <!-- <div>
+  <a href="#" class="fb btn">
+    <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+   </a>
+  <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+    </i> Login with Google+
+  </a>
+ 
+</div> -->
+  </div>
+</div>

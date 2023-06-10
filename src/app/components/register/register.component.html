@@ -1,0 +1,32 @@
+<div
+  style="
+    background-image: url('../../../assets/img/banner/hh1.jpg');
+    background-size: cover;
+    height: 100vh;
+  "
+>
+  <app-header></app-header>
+  <form [formGroup]="registerForm" (ngSubmit)="submitRegister()">
+    <div class="login-box">
+      <div class="textbox">
+        <input type="text" placeholder="First Name" formControlName="prenom"/>
+      </div>
+      <div class="textbox">
+        <input type="text" placeholder="Last Name"  formControlName="nom"/>
+      </div>
+      <div class="textbox">
+        <input type="text" placeholder="Username" formControlName="username"/>
+      </div>
+      <div class="textbox">
+        <input type="email" name="EMAIL" placeholder="Email address" formControlName="email" />
+      </div>
+      <div class="textbox">
+        <input type="password" placeholder="Password" formControlName="password"/>
+      </div>
+      <div class="textbox">
+        <input type="date" placeholder="Date of birth" formControlName="dateofbirth"/>
+      </div>
+      <a [routerLink]="['/login']"><input type="submit" class="btn" value="Sign in" />
+    </a></div>
+  </form>
+</div>

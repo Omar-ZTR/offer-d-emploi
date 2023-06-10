@@ -1,0 +1,129 @@
+.center{
+    padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: rgb(105, 245, 245);
+}
+.fa-star {
+  color: gray;
+  cursor: pointer;
+  padding: 0.0425rem;
+}
+.fa-star.gold {
+  color: #ffdc0f;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ 
+  .stars {
+    display: inline-flex;
+    justify-content: center;
+    font-size: 3em;
+  }
+
+ 
+  
+  .stars:hover .fa-star {
+    color: #ffdc0f;
+  }
+  
+  .stars .fa-star:hover ~ .fa-star {
+    color: gray;
+  }
+
+
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  .edit{
+    position: absolute;
+    left: 93%;
+    top: 11,4%;
+    padding: 20px;
+    font-size: 40px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+  
+    border-radius: 50%;
+    background-color:none;
+    color: rgb(12, 163, 45);
+}
+    .card {
+        background-color: white;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 0 15px 17px 0 rgba(167, 107, 107, 0.363);
+     }
+     .cad {
+      
+
+        transition: 0.3s;
+        border: 1px solid rgba(5, 5, 5, 0.658);
+        margin: 20px;
+        height: auto;}
+     .steps {
+        clear: both;
+        list-style: none;
+        padding-left: 5%;
+      }
+      .steps li {
+        margin: 2em 0;
+        padding-top: 1em;
+        display: block;
+        position: relative;
+        counter-increment: inst;
+      }
+      .steps li::before {
+        content: counter(inst);
+        
+        background: rgb(30, 255, 0);
+        color: #fff;
+        
+        font-size: 1em;
+        font-weight: 700;
+        font-style: italic;
+        text-shadow: 1px 1px rgba(255, 150, 0, 0.5);
+        
+        border-radius: 0 0.675em 0.675em 0;
+        font-size: 1.5em;
+        text-align: center;
+        
+        padding-top: 0;
+        padding-left: 2.25%;
+        left: -5%;
+        top: -0.65em;
+        height: 1.35em;
+        width: 1.35em;
+        position: absolute;
+        
+        transition: all 0.2s ease-in-out;
+        
+        z-index: -1;
+      }
+      @media (min-width: 33em) {
+        .steps li:before {
+          border-radius: 50%;
+          font-size: 1.5em;
+          height: 1.35em;
+          margin-left: 2.5%;
+          padding-left: 0;
+          padding-top: 0;
+          top: -0.15em;
+          width: 1.35em;
+          z-index: -1;
+        }
+      }
+      
+     

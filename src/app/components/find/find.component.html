@@ -1,0 +1,73 @@
+<div
+  style="
+    background-color: rgb(41, 39, 39);
+    background-size: cover;
+    height: 100vh;
+  "
+>
+  <div class="login-box">
+    <div class="row no-gutters align-items-center">
+      <div class="col-sm-6">
+        <button
+          class="hover"
+          style="
+            background-color: transparent !important;
+            padding: 0;
+            border: none;
+            background: none;
+          "
+          (click)="registerWithRole('freelancer')"
+        >
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="assets/img/banner/iwrk.png"
+                  alt="Avatar"
+                  style="width: 300px; height: 300px"
+                />
+              </div>
+              <div class="flip-card-back">
+                <br />
+                <br />
+                <br />
+                <br />
+                <h1 class="text-p">find work</h1>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="col-sm-6">
+        <button  
+
+        (click)="registerWithRole('client')"
+        style="
+          background-color: transparent !important;
+          padding: 0;
+          border: none;
+          background: none;
+        " class="hover">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img
+                  src="assets/img/banner/ffc.png"
+                  alt="Avatar"
+                  style="width: 300px; height: 300px"
+                />
+              </div>
+              <div class="flip-card-back">
+                <br />
+                <br />
+                <br />
+                <br />
+                <h1 class="text-p">find talent</h1>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

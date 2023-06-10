@@ -1,0 +1,57 @@
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+body{
+  height: 100vh;
+  
+ 
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height:300px;
+  perspective: 1000px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: rgba(187, 187, 187, 0);
+  color: rgb(255, 255, 255);
+}
+
+.flip-card-back {
+  background-color: rgba(2, 2, 2, 0);
+  transform: rotateY(180deg);
+}
+.login-box{
+  
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+}
+.text-p{
+  color:white;
+  text-decoration: underline;
+  font-style: oblique;
+  size: 12px;
+}
